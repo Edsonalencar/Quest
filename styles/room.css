@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+#room header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3.2rem;
+}
+
+header .buttons-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.outlined img {
+    margin-right: -1rem;
+    margin-left: 1rem;
+}
+
+.outlined {
+    width: 13.4rem;
+    margin-right: 0.8rem;
+}
+
+.start-button {
+    width: 17.3rem;
+}
+
+
+.bottons {
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    max-width: 85%;
+    margin: auto;
+}
+
+.container textarea {
+    width: 100%;
+    height: 13.4rem;
+    border: .2rem solid var(--grey-blue);
+    border-radius: 0 .8rem .8rem .8rem;
+    background-color: transparent;
+    color: var(--color-text);
+    padding: 1.2rem 1.6rem;
+    resize: none;
+    outline: none;
+    font-size: 1.6rem;
+}
+
+.text-area h2 {
+    margin-top: 6.4rem;
+    margin-bottom: 2.4rem;
+}
+
+.text-area-button {
+    max-width: 96%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: -6rem;
+    margin-bottom: 3.2rem;
+}
+
+.text-area-button p {
+    color: var(--detail);
+    font-family: 'Poppins', sans-serif;
+    opacity: 50%;
+    font-size: 1.4rem;
+    margin-left: 0.6rem;
+}
+
+.text-area form footer > div {
+    display: flex;
+    align-items: center;
+}
+
+.text-area-button button{
+    width: 9.8rem;
+    height: 4rem;
+}
+.ilustration {
+    width: 28rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 5.2rem;
+    display: none;
+}
+
+.ilustration.action {
+    display: block;
+}
+
+main .ilustration h2 {
+    font-weight: 600;
+    font-size: clamp(18px, 1.8rem, 4.5vh);
+    margin-top: 1.2rem;
+    margin-bottom: 1.3rem;
+}
+
+.ilustration p {
+    font-weight: 400;
+    font-size: clamp(14px, 1.4rem, 3vh);
+    font-family: 'Open Sans', sans-serif; 
+    color: var(--grey-dark);
+    padding-bottom: 10rem;
+}
+
+
+/**Questions**/
+
+
+.questions {
+    padding-bottom: 3.4rem;
+    width: 100%;
+}
+
+.question-wrapper {
+    min-height: 13.6rem;
+    background-color: var(--ligth-blue);
+    margin-bottom: 0.8rem;
+    border-radius: 0 .8rem .8rem .8rem;
+    padding: 2.4rem;
+}
+
+.question-wrapper .question-content p {
+    color: var(--color-text);
+    font-size: 1.6rem;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    min-height: 5.2rem;
+}
+
+.question-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.avatar {
+    margin-right: 1.6rem;
+    background: var(--blue);
+    clip-path: circle();
+   padding: 1.4rem;
+}
+
+.question-wrapper .actions {
+    padding: 0 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.question-wrapper .actions a {
+    display: flex;
+    align-items: center;
+    color: var(--grey-dark);
+    font-size: 1.6rem;
+
+    transition: filter .2s;
+
+    cursor: pointer;
+}
+
+.question-wrapper .actions a:hover {
+    filter: brightness(1.7);
+}
+
+.actions img {
+    margin-right: .8rem;
+}
+
+.check {
+    margin-right: 2.4rem;
+}
+
+/** Marcada Como Lida**/
+
+.question-wrapper.read {
+    background-color: var(--bg-question);
+}
+
+.question-wrapper.read .avatar {
+    background: var(--grey-blue);
+}
+
+ .question-wrapper .actions .select {
+    display: none;
+}
+
+.question-wrapper.read .actions .select{
+    display: flex;
+}
+
+.question-wrapper.read .actions .check, .question-wrapper.read .actions .delete {
+    display: none;
+}
+
+/**Modal**/
+.modal-wrapper {
+    background: var(--overlay);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal-wrapper.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-wrapper .modal {
+    width: min(59rem, 90%);
+    height: 36.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-blue);
+    text-align: center;
+    border-radius: .8rem;
+    flex-direction: column;
+}
+
+.modal-wrapper .modal h2 {
+    color: var(--color-text);
+    font-size: 2.4rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+}
+
+.modal-wrapper .modal p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--grey-dark);
+    margin-bottom: 2.4rem;
+
+}
+
+.modal-wrapper .modal input {
+    width: 30.2rem;
+    height: 4.8rem;
+    background: transparent;
+    border: .2rem solid var(--blue);
+    margin-bottom: 4rem;
+    padding: 1.3rem 1.6rem;
+    font-size: 1.6rem;
+    color: var(--color-text);
+    outline: none;
+}
+
+.modal .modal-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .modal-buttons > button:nth-child(1) {
+    margin-right: .8rem;
+    padding: 1.3rem 3.2rem;
+    background-color: var(--grey-ligth);
+}
+
+.modal .modal-buttons .red-buttom {
+    padding: 1.3rem 3.2rem;
+    background-color: var(--red);
+}
+
+/**Dark Mode - Posion**/
+
+.dark-mode {
+    text-align: center;
+    margin-right: 6rem;
+    margin-top: 3rem;
+    
+}
+.toggle label {
+    margin-right: -3.5rem;
+    margin-top: -2.5rem;
+}
