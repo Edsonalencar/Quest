@@ -1,0 +1,118 @@
+.content {
+    display: grid;
+   grid-template-columns: 55% 45%;
+   grid-template-rows: 11.4rem 1fr;
+
+   grid-template-areas: 
+   'header header'
+   'left right'
+}
+
+header {
+    grid-area: header;
+}
+
+.logo {
+    margin-top: 2rem;
+    margin-left: 16rem;
+}
+
+#bg {
+    grid-area: left;
+    background: url(../img/home-ilustration.svg) no-repeat top/contain;
+    background-position-x: -3rem;
+    width: 75rem;
+    height: 57rem;
+    margin-top: -3rem;
+}
+
+.ball {
+
+    background: var(--blue);
+    position: fixed;
+    width: 21.2rem;
+    height: 21.2rem;
+    opacity: 0.1;
+    clip-path: circle();
+}
+
+.ball.top {
+    top: -51rem;
+    right: -43rem;
+    width: 66.3rem;
+    height: 66.3rem;
+    
+}
+
+.ball.botton {
+    right: 5rem;
+    bottom: -17rem;
+}
+
+main{
+    grid-area: right;
+
+    display: flex;
+    align-items: center;
+}
+
+main .container {
+    width: min(36.3rem, 100%);
+    margin-top: -3rem;
+}
+
+button, input {
+    width: 36.3rem;
+    height: 5rem;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    outline: none;
+}
+
+.separator {
+    margin: 4rem 0;
+    width: 100%;
+    color: var(--grey-blue);
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    background: var(--grey-blue);
+    height: 0.1rem;
+    width: 100%;
+}
+
+#center-separator {
+    margin-left: 1.345rem;
+    margin-right: 1.345rem;
+}
+
+.start-button {
+    margin-top: 1.8rem;
+}
+
+.create-sala button {
+    margin-top: 2.4rem;
+}
+
+
+.create-sala button:hover {
+    box-shadow: 0 0 1em var(--shadow-botton);
+}
+
+.container.create-password{
+    margin-top: -16rem;
+}
+
+/**Dark Mode - Posion**/
+
+.dark-mode {
+    text-align: end;
+    margin-top: -2rem;
+    margin-right: 20rem;
+}
+.toggle label {
+    margin-right: -3.5rem;
+    margin-top: -2.5rem;
+}

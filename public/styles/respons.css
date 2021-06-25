@@ -1,0 +1,40 @@
+
+@media  (max-width: 1050px) {
+    
+    #bg {
+        display: none;
+    }
+
+    .content {
+        grid-template-columns: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    header {
+        width: 100%;
+    }
+    .logo {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        margin-top: 3.5rem;
+        margin-bottom: 5rem;
+    }
+
+    .dark-mode {
+        margin-right: 10rem;
+        margin-top: -3rem;
+    }
+
+    .container {
+        margin: auto;
+    }
+}
+
+@media (max-width: 400px) {
+
+}

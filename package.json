@@ -1,0 +1,28 @@
+{
+  "name": "Quest",
+  "version": "1.0.0",
+  "description": "Plataforma de perguntas anonimas",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edsonalencar/Quest.git"
+  },
+  "keywords": [],
+  "author": "Edson Alencar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edsonalencar/Quest/issues"
+  },
+  "homepage": "https://github.com/Edsonalencar/Quest#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "git": "^0.1.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

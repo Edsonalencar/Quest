@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/respons.css">
+
+    <title>Quest</title>
+</head>
+<body>
+    <div id="home" class="content">
+        <header>
+            <div class="logo">
+                <img src="img/logo.png" alt="Quest logo">
+                <h1>Quest</h1>
+            </div>
+
+            <div class="dark-mode">
+                    <i class="fas fa-moon"></i>
+
+                    <div class="toggle">
+                        <input id="switch" type="checkbox" name="theme">
+                        <label for="switch">Toggle</label>
+                    </div>
+            </div>
+        </header>
+
+        <div id="bg">
+            <div class="ball top"></div>
+            <div class="ball botton"></div>
+        </div>
+    
+        <main>
+            <div class="container">
+
+                <section class="form-login-register">
+                    <h2>Entre como participante</h2>
+                    <form action="">
+                        <label class="sr-only" for="room-id">Codigo da sala</label>
+                        <input type="number" id="room-id" placeholder="Código da sala">
+                        <button class="start-button"><img src="img/log-in.svg" alt="Login-icon">Entrar na sala</button>
+                    </form>
+                </section>
+                
+                <div class="separator">
+                    <div class="line"></div>
+                    <div id="center-separator">ou</div>
+                    <div class="line"></div>
+                </div>
+
+                <section class="create-sala">
+                    <h2>Crie sua própria sala, de forma fácil</h2>
+                    <a href="create-pass.html"><button class="outlined"> <img src="img/users.svg" alt="User-icon"> Criar Sala</button></a>
+                </section>
+
+            </div> 
+            </div>
+        </main>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/8fca9ad240.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
