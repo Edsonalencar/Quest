@@ -275,11 +275,14 @@ main .ilustration h2 {
     background-color: var(--grey-ligth);
 }
 
-.modal .modal-buttons .red-buttom {
+.modal .modal-buttons .confirm-buttom {
     padding: 1.3rem 3.2rem;
-    background-color: var(--red);
+    background-color: var(--blue);
 }
 
+.modal .modal-buttons .del-buttom.red {
+    background-color: var(--red);
+}
 /**Dark Mode - Posion**/
 
 .dark-mode {

@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/room.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/room.css">
 
     <title>Perguntas - Quest</title>
 </head>
 <body>
     <div id="room" class="content">
         <header>
-            <div class="logo">
-                <img src="img/logo.png" alt="Quest logo">
+            <a href="/"><div class="logo">
+                <img src="/img/logo.png" alt="Quest logo">
                 <h1>Quest</h1>
-            </div>
+            </div></a>
 
                 <div class="bottons">
                     <div class="dark-mode">
@@ -26,8 +26,8 @@
                             <label for="switch">Toggle</label>
                         </div>
                     </div>
-                    <button class="outlined">#323243 <img src="img/copy.svg" alt="copy-icon"></button>
-                    <a href="create-pass.html"><button class="start-button"><img src="img/users-white.svg" alt="copy-icon">Criar sala</button></a>
+                    <button class="outlined" id="room-id" data-id="323243">#323243 <img src="/img/copy.svg" alt="copy-icon"></button>
+                    <a href="/create-pass"><button class="start-button"><img src="/img/users-white.svg" alt="copy-icon">Criar sala</button></a>
                 </div>
             
         </header>
@@ -43,7 +43,7 @@
                         </textarea>
                         <footer class="text-area-button">
                             <div>
-                                <img src="img/lock_black.svg" alt="Lock-black Icon">
+                                <img src="/img/lock_black.svg" alt="Lock-black Icon">
                                 <p>Esta pergunta é anônima</p>
                             </div>
                             <button class="start-button">Enviar</button>
@@ -58,23 +58,23 @@
                         <div class="question-wrapper">
                             <div class="question-content">
                                 <div class="avatar">
-                                    <img src="img/avatar.svg" alt="avatar-icon">
+                                    <img src="/img/avatar.svg" alt="avatar-icon">
                                 </div>
                                 <div class="question">
                                     <p>Qual a diferença entre const, var e let no Javascript?</p>
                                 </div>
                             </div>
                             <div class="actions">
-                                <a href="#" class="check">
-                                    <img src="img/check.svg" alt="Marcar como lida">
+                                <a href="#" class="check" data-id="2">
+                                    <img src="/img/check.svg" alt="Marcar como lida">
                                     Marcar como lida
                                 </a>
-                                <a href="#" class="delete">
-                                    <img src="img/trash.svg" alt="excluit">
+                                <a href="#" class="delete" data-id="2">
+                                    <img src="/img/trash.svg" alt="excluit">
                                     Excluir
                                 </a>
-                                <a href="#" class="select">
-                                    <img src="img/check.svg" alt="excluit">
+                                <a href="#" class="select" data-id="2">
+                                    <img src="/img/check.svg" alt="excluit">
                                     Pergunta lida
                                 </a>
                             </div>
@@ -83,23 +83,48 @@
                         <div class="question-wrapper ">
                             <div class="question-content">
                                 <div class="avatar">
-                                    <img src="img/avatar.svg" alt="avatar-icon">
+                                    <img src="/img/avatar.svg" alt="avatar-icon">
                                 </div>
                                 <div class="question">
                                     <p>O que é Typescript?</p>
                                 </div>
                             </div>
                             <div class="actions">
-                                <a href="#" class="check">
-                                    <img src="img/check.svg" alt="Marcar como lida">
+                                <a href="#" class="check" data-id="3">
+                                    <img src="/img/check.svg" alt="Marcar como lida">
                                     Marcar como lida
                                 </a>
-                                <a href="#" class="delete">
-                                    <img src="img/trash.svg" alt="excluit">
+                                <a href="#" class="delete" data-id="3">
+                                    <img src="/img/trash.svg" alt="excluit">
                                     Excluir
                                 </a>
-                                <a href="#" class="select">
-                                    <img src="img/check.svg" alt="excluit">
+                                <a href="#" class="select" data-id="3">
+                                    <img src="/img/check.svg" alt="excluit">
+                                    Pergunta lida
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="question-wrapper ">
+                            <div class="question-content">
+                                <div class="avatar">
+                                    <img src="/img/avatar.svg" alt="avatar-icon">
+                                </div>
+                                <div class="question">
+                                    <p>O que é Script?</p>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <a href="#" class="check" data-id="4">
+                                    <img src="/img/check.svg" alt="Marcar como lida">
+                                    Marcar como lida
+                                </a>
+                                <a href="#" class="delete" data-id="4">
+                                    <img src="/img/trash.svg" alt="excluit">
+                                    Excluir
+                                </a>
+                                <a href="#" class="select" data-id="4">
+                                    <img src="/img/check.svg" alt="excluit">
                                     Pergunta lida
                                 </a>
                             </div>
@@ -108,23 +133,23 @@
                         <div class="question-wrapper read">
                             <div class="question-content">
                                 <div class="avatar">
-                                    <img src="img/avatar.svg" alt="avatar-icon">
+                                    <img src="/img/avatar.svg" alt="avatar-icon">
                                 </div>
                                 <div class="question">
                                     <p>O que é Javascript?</p>
                                 </div>
                             </div>
                             <div class="actions">
-                                <a href="#" class="check">
-                                    <img src="img/check.svg" alt="Marcar como lida">
+                                <a href="#" class="check" data-id="1">
+                                    <img src="/img/check.svg" alt="Marcar como lida">
                                     Marcar como lida
                                 </a>
-                                <a href="#" class="delete">
-                                    <img src="img/trash.svg" alt="excluit">
+                                <a href="#" class="delete" data-id="1">
+                                    <img src="/img/trash.svg" alt="excluit">
                                     Excluir
                                 </a>
-                                <a href="#" class="select">
-                                    <img src="img/check.svg" alt="excluit">
+                                <a href="#" class="select" data-id="1">
+                                    <img src="/img/check.svg" alt="excluit">
                                     Pergunta lida
                                 </a>
                             </div>
@@ -133,7 +158,7 @@
                 </section>
 
                 <div class="ilustration">
-                    <img src="img/quest-ilustration.svg" alt="chat-ulustration">
+                    <img src="/img/quest-ilustration.svg" alt="chat-ulustration">
                     <h2>Nenhuma pergunta por aqui...</h2>
                     <p>Faça sua primeira pergunta e envie o código dessa sala para outras pessoas!</p>
                 </div>
@@ -148,12 +173,12 @@
         <div class="modal">
         <h2>Excluir pergunta</h2>
         <p>Tem certeza que você deseja excluir esta pergunta?</p>
-        <form action="#">
+        <form action="#" method="POST">
             <label class="sr-only" for-id="password">Digite sua senha de Admin</label>
             <input type="password" id="password" name="password" placeholder="Digite sua senha">
             <div class="modal-buttons">
-                <button>Cancelar</button>
-                <button class="red-buttom">Sim, excluir</button>
+                <button class="cancel">Cancelar</button>
+                <button class=".confirm-buttom red">Sim, excluir</button>
             </div>
         </form>
         </div>
@@ -161,6 +186,6 @@
 
     <!--Scripts-->
     <script src="https://kit.fontawesome.com/8fca9ad240.js" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+    <script src="/js/main.js" defer type="module"></script>
 </body>
 </html>
