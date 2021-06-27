@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Quest Logo" title="Quest" src="images/logo-quest.png" width="40px" /> Quest
+  <img alt="Quest Logo" title="Quest" src=".github/logo-quest.png" width="40px" /> Quest
 </h1>
 
 <p align="center">
