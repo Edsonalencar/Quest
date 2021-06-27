@@ -1,0 +1,56 @@
+@media  (max-width: 1080px) {
+    
+    #bg {
+        display: none;
+    }
+
+    .ball{
+        width: 21.2rem;
+        height: 21.2rem;
+        background: var(--blue);
+        clip-path: circle();
+        opacity: 0.1;
+    
+        position: fixed;
+    }
+    
+    .ball.top{
+        top: -53rem;
+        width: 63.3rem;
+        right: -40rem;
+        height: 63.3rem;
+    }
+
+    .ball.bottom{
+        bottom: -18rem;
+        right: 5.6rem
+    }
+    body .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    header .logo {
+        margin-top: 10rem;
+    }
+
+    main .container {
+        margin: 10rem auto;
+    }
+}
+
+@media  (max-width: 420px) {
+
+    main .container {
+        margin: 10rem auto;
+    }    
+}

@@ -1,288 +1,207 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.content{
+    max-width: min(112rem, 90%);
+}
 
-#room header {
+#room header{
     width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 3.2rem;
 }
 
-header .buttons-header {
+#room header .buttons{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
 }
 
-.outlined img {
-    margin-right: -1rem;
+#room header .buttons .button-romm {
+    margin-right: .8rem;
+    padding: 1.1rem 1.6rem;
+    border-radius: .8rem;
+}
+
+#room header .buttons .button-romm img{
     margin-left: 1rem;
+    width: 2rem;
+    height: 2rem;
 }
 
-.outlined {
-    width: 13.4rem;
-    margin-right: 0.8rem;
+#room header .buttons .button {
+    padding: 1.3rem 3.2rem;
 }
 
-.start-button {
-    width: 17.3rem;
+#room header .buttons .button img{
+    width: 2rem;
+    height: 2rem;
 }
 
+/*** QUESTION FORM ***/
+main h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    color: var(--black);
+    font-weight: 700;
+    line-height: 4.2rem;
 
-.bottons {
-    display: flex;
-    align-items: center;
-}
-
-.content {
-    max-width: 85%;
-    margin: auto;
-}
-
-.container textarea {
-    width: 100%;
-    height: 13.4rem;
-    border: .2rem solid var(--grey-blue);
-    border-radius: 0 .8rem .8rem .8rem;
-    background-color: transparent;
-    color: var(--color-text);
-    padding: 1.2rem 1.6rem;
-    resize: none;
-    outline: none;
-    font-size: 1.6rem;
-}
-
-.text-area h2 {
-    margin-top: 6.4rem;
     margin-bottom: 2.4rem;
 }
 
-.text-area-button {
-    max-width: 96%;
+.body.dark main h2 {
+    color: var(--background);
+}
+
+#question-form form{
+    border: .2rem solid var(--grey-blue);
+    padding: 1.6rem;
+    border-radius: 0 .8rem .8rem .8rem;
+
+    margin-bottom: 1.6rem;
+}
+
+#question-form form textarea{
+    resize: none;
+    background: transparent;
+
+    width: 100%;
+
+    outline: none;
+}
+
+#question-form .form textarea::placeholder{
+    color: var(--grey-blue);
+}
+
+.body.dark #question-form form textarea{
+    color: var(--white);
+}
+
+#question-form form footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: auto;
-    margin-top: -6rem;
-    margin-bottom: 3.2rem;
 }
 
-.text-area-button p {
-    color: var(--detail);
-    font-family: 'Poppins', sans-serif;
-    opacity: 50%;
-    font-size: 1.4rem;
-    margin-left: 0.6rem;
-}
-
-.text-area form footer > div {
+#question-form form footer > div{
     display: flex;
     align-items: center;
-}
 
-.text-area-button button{
-    width: 9.8rem;
-    height: 4rem;
-}
-.ilustration {
-    width: 28rem;
-    text-align: center;
-    margin: auto;
-    margin-top: 5.2rem;
-    display: none;
-}
-
-.ilustration.action {
-    display: block;
-}
-
-main .ilustration h2 {
-    font-weight: 600;
-    font-size: clamp(18px, 1.8rem, 4.5vh);
-    margin-top: 1.2rem;
-    margin-bottom: 1.3rem;
-}
-
-.ilustration p {
+    color: var(--icons-details);
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: clamp(14px, 1.4rem, 3vh);
-    font-family: 'Open Sans', sans-serif; 
-    color: var(--grey-dark);
-    padding-bottom: 10rem;
+    font-size: 1.4rem;
+}
+
+#question-form form footer > div img{
+    margin-right: 0.9rem;
+}
+
+#question-form form footer button{
+    height: auto;
+    padding: .8rem 2.4rem;
+    line-height: 2.4rem
 }
 
 
-/**Questions**/
-
-
-.questions {
-    padding-bottom: 3.4rem;
-    width: 100%;
-}
-
-.question-wrapper {
-    min-height: 13.6rem;
-    background-color: var(--ligth-blue);
-    margin-bottom: 0.8rem;
-    border-radius: 0 .8rem .8rem .8rem;
+/******* Questions *****/
+.question-wrapper{
+    background: var(--light-blue);
+    margin-bottom: .8rem;
+    border-radius: 0 .8rem .8rem .8rem ;
     padding: 2.4rem;
 }
 
-.question-wrapper .question-content p {
-    color: var(--color-text);
-    font-size: 1.6rem;
-    word-break: break-word;
-    display: flex;
-    align-items: center;
-    min-height: 5.2rem;
+.body.dark .question-wrapper {
+    background: var(--bg-questions);
 }
 
-.question-content {
+.question-wrapper .question-content{
     display: flex;
     align-items: flex-start;
 }
 
-.avatar {
-    margin-right: 1.6rem;
+.question-wrapper .question-content .user{
     background: var(--blue);
     clip-path: circle();
-   padding: 1.4rem;
+    padding: 1.4rem;
 }
 
-.question-wrapper .actions {
-    padding: 0 0.8rem;
+.question-wrapper .question-content p{
+    margin-left: 1.6rem;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    min-height: 5.5rem;
+}
+
+.body.dark .question-content .question p{
+    color: var(--background);
+}
+
+.question-wrapper .actions{
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-.question-wrapper .actions a {
+.question-wrapper .actions > a{
     display: flex;
     align-items: center;
-    color: var(--grey-dark);
-    font-size: 1.6rem;
-
-    transition: filter .2s;
-
-    cursor: pointer;
 }
 
-.question-wrapper .actions a:hover {
-    filter: brightness(1.7);
+.body.dark .question-wrapper .actions > a{
+    color: var(--background);
 }
 
-.actions img {
+.question-wrapper .actions > a > img{
     margin-right: .8rem;
 }
 
-.check {
-    margin-right: 2.4rem;
+.question-wrapper .actions > a + a{
+    margin-left: 2.4rem;
 }
 
-/** Marcada Como Lida**/
-
-.question-wrapper.read {
-    background-color: var(--bg-question);
+/***** Question Read ****/
+.question-wrapper.read{
+    background: var(--grey-medium);
 }
 
-.question-wrapper.read .avatar {
+.body.dark .question-wrapper.read{
+    background: var(--grey-medium);
+}
+
+.question-wrapper.read .question-content .user{
     background: var(--grey-blue);
 }
 
- .question-wrapper .actions .select {
-    display: none;
-}
 
-.question-wrapper.read .actions .select{
-    display: flex;
-}
-
-.question-wrapper.read .actions .check, .question-wrapper.read .actions .delete {
-    display: none;
-}
-
-/**Modal**/
-.modal-wrapper {
-    background: var(--overlay);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-
-    visibility: hidden;
-    opacity: 0;
-}
-
-.modal-wrapper.active{
-    visibility: visible;
-    opacity: 1;
-}
-
-.modal-wrapper .modal {
-    width: min(59rem, 90%);
-    height: 36.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--white-blue);
+/*** No Questions   **/
+.no-questions{
     text-align: center;
-    border-radius: .8rem;
-    flex-direction: column;
+    margin-top: 5.2rem;
 }
-
-.modal-wrapper .modal h2 {
-    color: var(--color-text);
-    font-size: 2.4rem;
-    font-family: 'Poppins', sans-serif;
+.no-questions img{
+    max-width: 100%;
     margin-bottom: 1.2rem;
-    font-weight: 700;
+}
+.no-questions p{
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
-.modal-wrapper .modal p {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 1.6rem;
-    color: var(--grey-dark);
-    margin-bottom: 2.4rem;
-
+.body.dark main .no-questions p {
+    color: var(--background);
 }
 
-.modal-wrapper .modal input {
-    width: 30.2rem;
-    height: 4.8rem;
-    background: transparent;
-    border: .2rem solid var(--blue);
-    margin-bottom: 4rem;
-    padding: 1.3rem 1.6rem;
-    font-size: 1.6rem;
-    color: var(--color-text);
-    outline: none;
+.no-questions p + p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;   
+    margin-top: 1.3rem;
+    line-height: 1.9rem;
 }
 
-.modal .modal-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal .modal-buttons > button:nth-child(1) {
-    margin-right: .8rem;
-    padding: 1.3rem 3.2rem;
-    background-color: var(--grey-ligth);
-}
-
-.modal .modal-buttons .confirm-buttom {
-    padding: 1.3rem 3.2rem;
-    background-color: var(--blue);
-}
-
-.modal .modal-buttons .del-buttom.red {
-    background-color: var(--red);
-}
 /**Dark Mode - Posion**/
 
 .dark-mode {

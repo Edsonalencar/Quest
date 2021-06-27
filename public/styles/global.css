@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap');
-
-* {
+*{
     margin: 0;
     padding: 0;
     border: none;
@@ -8,48 +6,139 @@
     box-sizing: border-box;
 }
 
-html {
-
+html{
     
-    --dark: #110920;
-    --bg-text: #1a0e30;
-    --shadow-botton: #02c3ee00;
-    --bg-question: rgba(77, 93, 117, 0.1);
-    --bg-modal: #353a41;
-
-
-    --color-text: #0D114F;
-    --blue: #3485FF;
+    --black: #0D114F;
     --white: #FAFAFA;
     --red: #E83F5B;
-    --ligth-blue: #E0ECFF;
-    --white-blue: #FBFCFF;
-    --overlay: rgba(4, 9, 17, 0.8);
-    --details: #A5B0C1;
+    --light-blue: #E0ECFF;
+    --blue: #3485FF;
+    --background: #F6FAFF;
+    --overlay: #040911;
+    --icons-details: #A5B0C1;
+
     --grey-dark: #4D5E77;
+    --grey-white: #b3b6b9;
     --grey-blue: #A1B2CD;
-    --grey-medium: #D3D9E2;
-    --grey-ligth: #E5EAF1;
+    --grey-light:#E5EAF1;
+    --grey-medium: rgba(77, 93, 117, 0.1);
 
-    --hover-grey: #8794A7;
+    /**Dark Mode**/
+    --dark-bg: #110920;
+    --bg-questions: #1a0e30;
+    --shadow-botton: #02c3ee;
 
-    font-size: 62.5%;
+
+    /* 1rem = 16px (User Agent) = 100% (User Agent) */
+    font-size: 62.5% /* 10px */
 }
 
-body {
+.body{
+    display: flex;
     height: 100vh;
-    background-color: var(--white-blue);
+    background: var(--background);
 }
 
-body, button, input, textarea {
-    font-size: clamp(14px, 1.6rem, 2vh);
-    font-family: 'Open Sans', sans-serif; 
+.body.dark {
+    background-color: var(--dark-bg);
 }
 
-.logo {
+body, button, input, textarea{
+    /* intervalo de tamanho */
+    font-size: clamp(14px, 1.6rem, 2vw);
+
+    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+.content{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sr-only{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+/*--------- input and buttons*/
+input, button, .button{
+    border-radius: .8rem;
+    height: 5rem;
+}
+
+button, .button{
+    font-family: 'Poppins';
+    font-weight: 500;
+    line-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--blue);
+    color: var(--white);
+
+    transition: filter .2s;
+
+    cursor: pointer;
+}
+
+button:hover, .button:hover{
+    filter: brightness(1.2);
+}
+
+button > img,
+.button > img{
+    margin-right: 1rem;
+    width: 2rem;
+}
+
+button.outlined,
+.button-romm.outlined, .button.outlined{
+    background: transparent;
+    color: var(--blue);
+    border: .2rem solid var(--blue);
+}
+
+.body.dark main .button.outlined:hover {
+    box-shadow: 0 0 1em var(--shadow-botton);
+} 
+
+button.red,
+.button.red{
+    background: var(--red);
+    color: var(--white);
+}
+
+button.grey,
+.button.grey{
+    background: var(--grey-light);
+    color: var(--grey-dark);
+}
+
+
+
+/*** HEADER ****/
+
+.content header{
+    width: 80%;  
+    margin: 3.5rem auto;
+}
+
+header .logo {
     display: flex;
     align-items: center;
     justify-content: start;
+    margin-top: -2rem;
 }
 
 .logo img {
@@ -59,84 +148,22 @@ body, button, input, textarea {
 .logo h1 {
     font-size: 3rem;
     margin-left: 0.7rem;
-    color: var(--color-text);
+    color: var(--black);
 }
 
-.sr-only {
-    position: absolute;
-    height: 1px;
-    width: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip-path: react(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-}
-
-.content {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.container h2 {
-    font-family: 'Poppins', sans-serif;
-    color: var(--color-text);
-    font-size: clamp(20px, 2.8rem, 5vh);
-    font-weight: 700;
-}
-
-input, button, .button{
-    border-radius: .8rem;
-    height: 5rem;
-}
-
-button{
-    font-family: 'Poppins';
-    font-weight: 500;
-    line-height: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: filter .2s;
-
-    cursor: pointer;
-}
-
-button:hover, .button:hover{
-    filter: brightness(1.4);
-}
-
-button > img{
-    margin-right: 1rem;
-    width: 2rem;
-}
-
-.start-button{
-    background-color: var(--blue);
-    color: var(--white);
-}
-
-.outlined {
-    background-color: transparent;
-    color: var(--blue);
-    border: 0.2rem solid var(--blue);
-    padding: 0 1.6rem;
-}
-
-.form-login-register input {
-    margin-top: 2.4rem;
-    border: 0.2rem solid var(--grey-blue);
-    padding: 0 1.6rem;
+.body.dark header .logo h1 {
+    color: var(--background);
 }
 
 /**Dark Mode**/
 
 .dark-mode {
-    color: var(--color-text);
+    color: var(--dark-bg);
     font-size: 2.5rem;
+}
+
+.body.dark header .dark-mode {
+    color: var(--background);
 }
 
 .toggle input[type=checkbox]{

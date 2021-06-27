@@ -1,52 +1,29 @@
-.content {
+.content{
     display: grid;
-   grid-template-columns: 55% 45%;
-   grid-template-rows: 11.4rem 1fr;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 11.4rem 1fr;
 
-   grid-template-areas: 
-   'header header'
-   'left right'
+    grid-template-areas: 
+    'header header'
+    'left right'
 }
 
-header {
+header{
     grid-area: header;
 }
 
-.logo {
-    margin-top: 2rem;
-    margin-left: 16rem;
+header a {
+    margin-left: -2rem;
 }
 
-#bg {
+#bg{
     grid-area: left;
-    background: url(../img/home-ilustration.svg) no-repeat top/contain;
-    background-position-x: -3rem;
+
+    background: url('/images/home-bg-img.svg') no-repeat top/contain;
+    background-position-x: -5rem;
     width: 75rem;
-    height: 57rem;
+    height: 55rem;
     margin-top: -3rem;
-}
-
-.ball {
-
-    background: var(--blue);
-    position: fixed;
-    width: 21.2rem;
-    height: 21.2rem;
-    opacity: 0.1;
-    clip-path: circle();
-}
-
-.ball.top {
-    top: -51rem;
-    right: -43rem;
-    width: 66.3rem;
-    height: 66.3rem;
-    
-}
-
-.ball.botton {
-    right: 5rem;
-    bottom: -17rem;
 }
 
 main{
@@ -54,63 +31,96 @@ main{
 
     display: flex;
     align-items: center;
+    margin-top: -10rem;
 }
 
-main .container {
-    width: min(36.3rem, 100%);
-    margin-top: -3rem;
+main .container{    
+    width: min(36.3rem, 90%);
+    margin-left: -10rem;
+    margin-top: 2rem;
 }
 
-button, input {
-    width: 36.3rem;
-    height: 5rem;
-    border-radius: 0.8rem;
-    font-size: 1.6rem;
+main h2{
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    font-size: clamp(20px, 5vw, 2.8rem);
+    margin-bottom: 2.4rem;
+}
+
+.body.dark main h2{
+    color: var(--background);
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(20px, 5vw, 2.8rem);
+    margin-bottom: 2.4rem;
+}
+
+input{
+    border: .2rem solid var(--grey-blue);
+    padding: 0 1.6rem;
     outline: none;
 }
 
-.separator {
-    margin: 4rem 0;
+input, button, .button{
     width: 100%;
-    color: var(--grey-blue);
+    margin-bottom: 1.8rem;
+}
+
+/* Separator Line */
+.separator{
     display: flex;
     align-items: center;
+
+    margin: 4rem 0;
 }
 
-.line {
+.separator div:nth-child(2){
+    color: var(--grey-blue);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 0 1.35rem;
+    line-height: 0;
+}
+
+.separator div:nth-child(1),
+.separator div:nth-child(3){
     background: var(--grey-blue);
-    height: 0.1rem;
     width: 100%;
+    height: 1px;
 }
 
-#center-separator {
-    margin-left: 1.345rem;
-    margin-right: 1.345rem;
+/*** create balls ***/
+.ball{
+    width: 21.2rem;
+    height: 21.2rem;
+    background: var(--blue);
+    clip-path: circle();
+    opacity: 0.1;
+
+    position: fixed;
 }
 
-.start-button {
-    margin-top: 1.8rem;
+.ball.top{
+    top: -46rem;
+    width: 63.3rem;
+    right: -35rem;
+    height: 63.3rem;
 }
 
-.create-sala button {
-    margin-top: 2.4rem;
+.ball.top-left, .ball.bottom-left {
+    display: none;
 }
 
-
-.create-sala button:hover {
-    box-shadow: 0 0 1em var(--shadow-botton);
-}
-
-.container.create-password{
-    margin-top: -16rem;
+.ball.bottom{
+    bottom: -15rem;
+    right: 5.6rem
 }
 
 /**Dark Mode - Posion**/
 
 .dark-mode {
     text-align: end;
-    margin-top: -2rem;
-    margin-right: 20rem;
+    margin-top: -3.5rem;
+    margin-right: 15rem;
 }
 .toggle label {
     margin-right: -3.5rem;
